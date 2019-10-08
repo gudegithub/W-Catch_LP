@@ -5,7 +5,7 @@
 
 
 //【必須】 自分のメールアドレスの設定 -- 複数のメールアドレスに送信したい場合は、以下の行をコピーして増やしていけばOKです。行頭の//を消せば有効となります。いくつでも追加可能。 --
-$rm_send_address[] = 'k.ishikawa.gude@gmail.com';
+$rm_send_address[] = 'info.wcatch@gmail.com';
 //$rm_send_address[] = 'aaa@example.co.jp';
 //$rm_send_address[] = 'bbb@example.co.jp';
 
@@ -13,7 +13,7 @@ $rm_send_address[] = 'k.ishikawa.gude@gmail.com';
 
 
 //【必須】 サンクスページのURL -- index.htmlからの相対パス、またはhttp://からの絶対パス --
-$rm_thanks_page_url = 'LP/thanks.html';
+$rm_thanks_page_url = 'mailform-v7.2/thanks.html';
 
 
 
@@ -84,7 +84,7 @@ $rm_thanks_body_signature = <<<EOM
 この度はお問い合わせを頂き、重ねてお礼申し上げます。
 -----------------------------------------------------------------------------------
 
-　　レスポンシブメールフォーム
+　　株式会社Gude
 　　〒***-**** ここに住所など
 　　TEL : ***-***-****
 　　Web Site URL : https://www.1-firststep.com
@@ -105,5 +105,5 @@ EOM;
 
 
 //【任意】 メールフォームを設置するサイトのドメイン -- 記入した場合はリファラチェック機能が有効になります。 --
-$rm_domain_name = '';
+$rm_domain_name = 'gude.jp';
 //$rm_domain_name = '1-firststep.com';

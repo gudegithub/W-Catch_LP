@@ -2,7 +2,7 @@
 <html lang="ja" dir="ltr" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
-    <title>5万円でデザインから実装まで請け負います! 株式会社Gude</title>
+    <title>W-Catch</title>
     <meta name="description" content="関西のIT企業、株式会社Gudeによる、5万円でWEBサイトのデザインから実装までを請け負うサービスのランディングページです。">
     <!-- 要編集 -->
     <meta property="og:title" content="ページのタイトル" />
@@ -141,16 +141,18 @@
         <h2>お問い合わせ</h2>
       </div>
       <div id="contactForm_border"></div>
-      <form action="mailform-v7.2/php/mailform.php" method="post">
-        <label for="userName" placeholder="">お名前</label><br>
-        <input class="required" id="userName" type="text" name="name_1"><br>
-        <label for="userCompanyName">会社名/法人名</label><br>
-        <input class="required" id="userCompanyName" type="text" name="company"><br>
-        <label for="userEmail">メールアドレス</label><br>
-        <input class="required" id="userEmail" type="email" name="mail_address"><br>
-        <label for="comment">お問い合わせ内容</label><br>
-        <textarea id="userComment" name="contents"></textarea><br>
-        <input id="submit" type="submit" value="お問い合わせ内容の確認" confirm="送信しますか？">
+      <form action="mailform-v7.2/php/mailform.php" method="post" id="mail_form">
+        <dl>
+          <dt>名前</dt>
+          <dd><input class="required" id="name_1" type="text" name="name_1" placeholder=""><br></dd>
+          <dt>会社名</dt>
+          <dd><input class="required" id="company" type="text" name="company" placeholder=""></dd>
+          <dt>メールアドレス</dt>
+          <dd><input class="required" id="mail_address" type="email" name="mail_address" placeholder=""></dd>
+          <dt>お問い合わせ内容</dt>
+          <dd class="required"><textarea id="contents" name="contents" cols="40" rows="5"></textarea></dd>
+        </dl>
+        <p id="form_submit"><input type="button" id="form_submit_button" value="送信する" /></p>
       </form>
     </article>
     <footer>
@@ -160,9 +162,12 @@
     </footer>
     <!-- 自前のJS -->
     <script type="text/javascript" src="js/script.js"></script>
-    <!-- メールフォームのJS -->
+    <!-- メールフォームのJS,PHP -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="mailform-v7.2/js/mailform-js.php"></script>
+    <script src="mailform-v7.2/js/jquery.autoKana.js"></script>
+    <script src="mailform-v7.2/js/ajaxzip3.js"></script>
+    <script src="mailform-v7.2/js/jquery.datetimepicker.js"></script>
 
     <!-- フリガナ自動入力ライブラリここから -->
     <script src="mailform-v7.2/js/jquery.autoKana.js"></script>

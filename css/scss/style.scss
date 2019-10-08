@@ -476,7 +476,7 @@ body {
       margin-left: 50%;
       transform: translateX(-50%);
       text-align: center;
-      label {
+      dt {
         color: #f8f8f8;
         font-size: 18px;
         line-height: 36px;
@@ -502,11 +502,14 @@ body {
         color: #ffffff;
         background-color: #262626;
       }
-      #submit {
-        padding: 15px 30px;
-        background-color: #fcf378;
+      span {
+        display: none !important;
+      }
+      #form_submit_button {
+        padding: 15px 30px !important;
+        background-color: #fcf378 !important;
         color: #000000 !important;
-        font-family: 'ＭＳ ゴシック';
+        font-family: 'ＭＳ ゴシック' !important;
       }
     }
   }

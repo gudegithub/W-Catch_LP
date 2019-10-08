@@ -5,8 +5,8 @@ function getScroll() {
   let scroll = element.scrollTop;
   // スクロール範囲の最大のピクセル数
   let range = element.scrollHeight;
-  console.log(scroll);
-  console.log(range);
+  // console.log(scroll);
+  // console.log(range);
 
   if (scroll / range > 0.093) {
     let contents_animation = document.getElementById('contents_animation');

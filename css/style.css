@@ -551,7 +551,7 @@ body #contactForm form {
   text-align: center;
 }
 
-body #contactForm form label {
+body #contactForm form dt {
   color: #f8f8f8;
   font-size: 18px;
   line-height: 36px;
@@ -580,11 +580,15 @@ body #contactForm form textarea {
   background-color: #262626;
 }
 
-body #contactForm form #submit {
-  padding: 15px 30px;
-  background-color: #fcf378;
+body #contactForm form span {
+  display: none !important;
+}
+
+body #contactForm form #form_submit_button {
+  padding: 15px 30px !important;
+  background-color: #fcf378 !important;
   color: #000000 !important;
-  font-family: 'ＭＳ ゴシック';
+  font-family: 'ＭＳ ゴシック' !important;
 }
 
 body footer {
