@@ -14,7 +14,10 @@
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- 自前のCSS -->
-    <link rel="stylesheet" href="css/style.css">
+      <!-- PC対応 -->
+    <link rel="stylesheet" href="css/style.css" media="(min-width: 767px)">
+      <!-- mobile/tablet対応 -->
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)">
     <link rel="stylesheet" href="css/reset.css">
     <!-- メールフォームのCSS -->
     <!-- <link rel="stylesheet" href="mailform-v7.2/css/mailform.css" /> -->
@@ -26,7 +29,7 @@
   <body>
     <div id="navigation">
       <div id="navigation_wrapper">
-        <div id="navigation_conpanyName">
+        <div id="navigation_companyName">
           <h2>W-Catch</h2>
         </div>
         <div id="navigation_buttonToForm">
@@ -45,10 +48,10 @@
         <h1>気軽にIT導入を。</h1>
       </div>
       <div id="header_text_2">
-        <h2>WEBサイトのデザインから実装までを<br>低価格でいたします。</h2>
+        <h2>WEBサイトのデザインから実装までを低価格でいたします。</h2>
       </div>
     </header>
-    <article id="contents">
+    <article id="content">
       <object type="image/svg+xml" data="img/contentsBg1.svg" id="contents_background_1"></object>
       <object type="image/svg+xml" data="img/contentsBg2.svg" id="contents_background_2"></object>
       <object type="image/svg+xml" data="img/contentsBg3.svg" id="contents_background_3"></object>
@@ -95,7 +98,8 @@
         </div>
         <div class="contents_border"></div>
         <div class="contents_text">
-          <p>Wordpressに代表されるCMSをWebサイトに導入することにより、記事の追加などの管理、更新が簡単に行えるようになります。IT導入コンサルティングも同時に行いますので、ITに弱い方でも簡単に使用・分析が可能です・</p>
+          <p>Wordpressに代表されるCMSをWebサイト
+            に導入することにより、記事の追加などの管理、更新が簡単に行えるようになります。IT導入コンサルティングも同時に行いますので、ITに弱い方でも簡単に使用・分析が可能です・</p>
         </div>
       </section>
       <section class="none" id="contents_plansTitle">
