@@ -422,6 +422,8 @@ body #content .contents_plan_term {
   right: 20px;
   bottom: 15px;
   text-align: center;
+  padding-bottom: 5px;
+  border-bottom: solid 1px;
 }
 
 body #content .contents_plan_term p {
