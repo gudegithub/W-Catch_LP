@@ -1,6 +1,15 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+@import url('https://fonts.googleapis.com/css?family=PT Mono');
+
 .none {
   display: none !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Mono";
 }
 
 html {
@@ -15,8 +24,10 @@ body {
 body #navigation {
   z-index: 5;
   width: 100vw;
-  height: 15vh;
+  height: 10vh;
   position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: #908e8e;
 }
 
 body #navigation #navigation_wrapper {
@@ -32,15 +43,20 @@ body #navigation #navigation_wrapper #navigation_companyName {
   position: absolute;
   top: 3vh;
   left: 30px;
+  
 }
 
 body #navigation #navigation_wrapper #navigation_companyName h2 {
   font-size: 32px;
+  color: #4b4949;
+  font-family: "PT Mono";
 }
 
 /* 2019.10.15 ボタンを定型に変更 */
 /* 2019.10.15 文字サイズ調整 */
-body #navigation #navigation_wrapper #navigation_buttonToForm {
+
+/* 2019.11.7 一旦コメントに 味元*/
+/* body #navigation #navigation_wrapper #navigation_buttonToForm {
   width: 200px;
   height: 80px;
   position: absolute;
@@ -73,7 +89,33 @@ body #navigation #navigation_wrapper #navigation_buttonToForm a p {
   user-select: none;
   color: #f8f8f8;
   font-family: 'ＭＳ ゴシック';
+} */
+
+
+/* ここから変更 */
+.header-navi-list {
+  position: absolute;
+  font-size: 25px;
+  top: 26px;
+  right: 30px;
+  font-family: "PT Mono";
+  letter-spacing:  0.3em;
 }
+
+.header-navi-item {
+  display: inline;
+  padding-left: 25px;
+}
+
+.header-navi-item:hover {
+  opacity: 0.8;
+}
+
+.header-navi-item a {
+  text-decoration: none;
+  color: #4b4949;
+}
+
 
 body header {
   width: 100vw;
@@ -104,42 +146,47 @@ body header #header_backgroundPattern_container #header_backgroundPattern {
 }
 
 body header #header_text_1 {
-  position: absolute;
-  top: 30vh;
-  left: 12vw;
+  position: relative;
+  top: 40vh;
+  text-align: center;
   animation: fadein 1s;
 }
 
 body header #header_text_1 h1 {
   font-size: 64px;
-  font-family: 'ＭＳ ゴシック';
+  font-family: "PT Mono";
 }
 
 body header #header_text_2 {
-  position: absolute;
+  position: relative;
+  margin: 0;
   top: 50vh;
-  left: 17vw;
+  text-align: center;
   animation: fadein 1s;
 }
 
 body header #header_text_2 h2 {
   font-size: 32px;
-  font-family: 'ＭＳ ゴシック';
-  width: 560px;
+  font-family: "PT Mono";
+  width: 100vw;
 }
 
-body #content {
+
+/* 11/10変更により一旦コメント味元 */
+/* body #content {
   width: 100vw;
   height: 400vh;
   position: relative;
-}
+} */
 
+/* メインコンテンツ */
 body #content #contents_background_1 {
   z-index: -2;
   width: 80vw;
   position: absolute;
   top: 10vh;
   left: 0;
+  opacity: 0.6;
 }
 
 body #content #contents_background_2 {
@@ -148,6 +195,8 @@ body #content #contents_background_2 {
   position: absolute;
   top: 0;
   left: -10vw;
+  opacity: 0.6;
+
 }
 
 body #content #contents_background_3 {
@@ -156,6 +205,8 @@ body #content #contents_background_3 {
   position: absolute;
   top: 150vh;
   right: 0;
+  opacity: 0.6;
+
 }
 
 body #content #contents_background_4 {
@@ -165,6 +216,8 @@ body #content #contents_background_4 {
   top: -90vh;
   left: -20vw;
   transform: scale(0.6);
+  opacity: 0.6;
+
 }
 
 body #content #contents_background_5 {
@@ -174,6 +227,8 @@ body #content #contents_background_5 {
   top: 170vh;
   left: 5vw;
   transform: scale(0.3);
+  opacity: 0.6;
+
 }
 
 body #content #contents_background_6 {
@@ -182,346 +237,180 @@ body #content #contents_background_6 {
   position: absolute;
   top: 140vh;
   left: 0;
+  opacity: 0.6;
+
 }
 
-body #content .contents_title {
-  width: 100%;
-  margin: 40px auto 25px 50%;
-  transform: translateX(-50%);
-  text-align: center;
+
+.content-wrap {
+  width: 100vw;
+  height: 145vh;
 }
 
-body #content .contents_title h2 {
-  font-size: 20px;
-  font-family: 'ＭＳ ゴシック';
-}
-
-body #content .contents_border {
-  width: 24vw;
-  height: 3px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  background-color: #0030b3;
-}
-
-body #content .contents_text {
-  width: 41vw;
-  margin: 25px auto auto 50%;
-  transform: translateX(-50%);
-}
-
-body #content .contents_text p {
-  font-size: 15px;
-  line-height: 17px;
-  font-family: 'ＭＳ ゴシック';
-}
-
-body #content #contents_animation {
-  z-index: 1;
-  width: 50vw;
-  height: 40vh;
-  position: absolute;
-  top: 10vh;
-  left: 37vw;
-  box-shadow: 5px 5px 5px 5px #707070;
-  border-radius: 8%;
-  background-color: #ffffff;
-  animation: fadein 1s;
-}
-
-body #content .contents_animationExample {
-  width: 30vw;
-  height: 30vw;
-  box-shadow: 5px 5px 5px 5px #707070;
-  border-radius: 8%;
-  background-color: #ffffff;
-  animation: fadein 1s;
-}
-
-body #content .contents_animationExample .contents_animationExample_wrapper {
-  width: 100%;
-  height: 100%;
+/* 何ができるか */
+.content-title {
   position: relative;
-}
-
-body #content #contents_animationExample_1 {
-  z-index: 2;
-  position: absolute;
-  top: 45vh;
-  left: 9vw;
-  overflow-x: hidden;
-}
-
-body #content #contents_animationExample_1 p {
-  width: 70%;
-  height: 30%;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  font-family: 'ＭＳ ゴシック';
-}
-
-body #content #contents_animationExample_1 #contents_animationExample_fadein {
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  animation: animationExample_fadein 4s infinite;
+  margin: 0 auto;
+  font-family: "PT Mono";
+  letter-spacing: 5px;
+  border-top: rgba(73, 73, 73, 0.6) solid;
+  width: 90vw;
+}
+
+.content-title h1 {
+  font-size: 56px;
+  margin-bottom: 15px;
+  margin-top: 80px;
+}
+
+.content-title h2 {
   font-size: 36px;
+  margin-bottom: 100px;
 }
 
-body #content #contents_animationExample_1 #contents_animationExample_slideIn {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  animation: animationExample_slidein 4s infinite;
+.content-title h1,h2 {
+  text-align: center;
+}
+
+ul.content-list {
+  text-align: center;
+  display: block;
   font-size: 36px;
+  font-family: "PT Mono";
+  letter-spacing: 1em;
+  margin: 0 250px;
 }
 
-body #content #contents_animationExample_2 {
-  z-index: 3;
-  position: absolute;
-  top: 58vh;
-  left: 37vw;
+#content-item1, #content-item2, #content-item3 {
+  border: #757575 solid 2px;
+  padding: 80px;
+  margin-bottom: 90px;
+  background-color: rgba(199, 170, 170, 0.8);
+  cursor: pointer;
 }
 
-body #content #contents_animationExample_2 p {
-  width: 70%;
-  height: 30%;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  font-family: 'ＭＳ ゴシック';
+#content-item1, #content-item2, #content-item3:hover {
+  opacity: 0.8;
 }
 
-body #content #contents_animationExample_2 #contents_animationExample_loading_1 {
-  display: block;
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  animation: animationExample_loading_1 1s linear infinite;
-  font-size: 28px;
+/* プラン */
+.plan-select {
+  margin: 0 auto;
+  font-family: "PT Mono";
 }
 
-body #content #contents_animationExample_2 #contents_animationExample_loading_2 {
-  width: 70%;
-  height: 70%;
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  animation: rotating 3s linear infinite;
-}
-
-body #content #contents_animationExample_3 {
-  z-index: 4;
-  position: absolute;
-  top: 78vh;
-  left: 65vw;
-}
-
-body #content #contents_animationExample_3 p {
-  width: 70%;
-  height: 30%;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  font-family: 'ＭＳ ゴシック';
-}
-
-body #content #contents_animationExample_3 #contents_animationExample_button_1 {
-  width: 40%;
-  height: 30%;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  background-color: #0030b3;
-  border-radius: 20px;
-  box-shadow: 0 10px #04247d;
-  animation: animationExample_button_1 2s infinite;
-}
-
-body #content #contents_animationExample_3 #contents_animationExample_button_1 p {
+.plan {
   text-align: center;
-  margin-top: 20%;
-  color: #f8f8f8;
-  font-family: 'ＭＳ ゴシック';
-}
-
-body #content #contents_animationExample_3 #contents_animationExample_button_2 {
-  width: 30%;
-  height: 30%;
-  position: absolute;
-  bottom: 18vh;
-  left: 1vw;
-  transform: scale(0.15);
-}
-
-body #content #contents_animationExample_3 #contents_animationExample_button_2 object {
-  animation: rotating 7s linear infinite;
-}
-
-body #content #contents_animationExample_3 #contents_animationExample_button_2 p {
-  text-align: center;
-  margin-top: 20%;
-  color: #f8f8f8;
-  font-family: 'ＭＳ ゴシック';
-}
-
-body #content #contents_cms {
-  z-index: 1;
-  width: 50vw;
-  height: 40vh;
-  position: absolute;
-  top: 160vh;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 5px 5px 5px 5px #707070;
-  border-radius: 8%;
-  background-color: #ffffff;
-  animation: fadein_center 1s;
-}
-
-body #content #contents_plansTitle {
-  z-index: 1;
-  position: absolute;
-  top: 235vh;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  animation: fadein_center 1s;
-}
-
-body #content #contents_plansTitle h2 {
-  font-size: 32px;
-  margin-bottom: 16px;
-  font-family: 'ＭＳ ゴシック';
-}
-
-body #content #contents_plansTitle p {
-  font-size: 18px;
-  font-family: 'ＭＳ ゴシック';
-}
-
-body #content #contents_plansTitle p i {
-  padding-top: 50%;
-  transform: rotateY(-50%);
-}
-
-body #content .contents_plan_wrapper {
-  width: 100%;
-  height: 88%;
-  position: relative;
-}
-
-body #content .contents_plan_term {
-  width: 216px;
-  position: absolute;
-  right: 20px;
-  bottom: 15px;
-  text-align: center;
-  padding-bottom: 5px;
-  border-bottom: solid 1px;
-}
-
-body #content .contents_plan_term p {
-  font-size: 18px;
-  line-height: 25px;
-  font-family: 'ＭＳ ゴシック';
-}
-
-body #content .contents_plan_term p i {
-  transform: translateY(6px);
-}
-
-body #content #contents_plan_1 {
-  z-index: 1;
-  width: 40vw;
-  height: 46vh;
-  position: absolute;
-  top: 260vh;
-  left: 8vw;
-  box-shadow: 5px 5px 5px 5px #707070;
-  border-radius: 8%;
-  background-color: #ffffff;
-  animation: fadein 1s;
-}
-
-body #content #contents_plan_1 .contents_text {
-  width: 34vw;
-}
-
-body #content #contents_plan_2 {
-  z-index: 1;
-  width: 40vw;
-  height: 46vh;
-  position: absolute;
-  top: 260vh;
-  right: 8vw;
-  box-shadow: 5px 5px 5px 5px #707070;
-  border-radius: 8%;
-  background-color: #ffffff;
-  animation: fadein 1s;
-}
-
-body #content #contents_plan_2 .contents_text {
-  width: 34vw;
-}
-
-body #content #contents_buttonToForm {
-  z-index: 1;
-  width: 60vw;
-  height: 36vh;
-  position: absolute;
-  top: 330vh;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  border-radius: 30px;
-  background: linear-gradient(136.9deg, #00a09b 3.1%, #00b383 95.27%);
-  box-shadow: 1px 3px 3px 2px #707070;
-  transition: 1s;
-  animation: fadein_center 1s;
-}
-
-body #content #contents_buttonToForm:hover {
-  background: linear-gradient(136.9deg, #40a19d 3.1%, #47b396 95.27%);
-}
-
-body #content #contents_buttonToForm #contents_buttonToForm_wrapper {
-  width: 100%;
-  height: 100%;
-}
-
-body #content #contents_buttonToForm a {
-  z-index: 2;
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-body #content #contents_buttonToForm a p {
-  width: 278px;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translateX(50%);
+  float: left;
+  width: 25vw;
+  border: #757575 solid 2px;
+  margin: 10px 10px 10px 65px;
+  padding: 80px 0 80px 24px;
+  letter-spacing: 1em;
   font-size: 24px;
-  color: #f8f8f8;
+  cursor: pointer;
+  background-color: rgb(170, 199, 186);
+}
+
+.plan:hover {
+  opacity: 0.8;
+}
+
+.clear {
+  clear: both;
+}
+
+#plans {
+  text-align: center;
+  font-family: "PT Mono";
+}
+
+#plans h1 {
+  font-size: 24px;
+  padding: 50px 0 30px 0;
+  letter-spacing: 1em;
+  margin-right: -1em;
+}
+
+#plans p {
+  font-size: 12px;
+  letter-spacing: 1em;
+  margin-right: -1em;
+  margin-bottom: 60px;
+}
+
+.plan-suggest {
+  display: flex;
+  border: #757575 solid 2px;
+  width: 1020px;
+  height: 412px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.plan-default {
+  width: 200px;
+  height: 450px;
+  text-align: center;
+  line-height: 100px;
+  font-family: "PT Mono";
+  padding-left: 30px;
+  padding-top: 60px;
+  letter-spacing: 0.2em;
+  margin-right: -0.2em;
+}
+
+.plan-simple1 {
+  padding-top: 100px;
+}
+
+
+/* 制作工程 */
+#web-flow {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.flow {
+  display: flex;
+}
+
+.flow-box {
+  width: 15vw;
+  height: 20vh;
+  border: 1px solid #fff;
+  background-color: rgb(199, 233, 193);
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.flow-box:hover {
+  opacity: 0.8;
+}
+
+.flow-box img {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+}
+
+.flow-box h1 {
+  padding-top: 15px;
   font-family: 'ＭＳ ゴシック';
+
 }
 
-body #content #contents_buttonToForm a p i {
-  transform: translateY(3px);
-}
-
+/* お問い合わせ */
 body #contactForm {
   width: 100vw;
   height: 160vh;
+  background-color: #ffffff;
   position: relative;
-  background-color: #3f3f3f;
 }
 
 body #contactForm #contactForm_title {
@@ -545,7 +434,7 @@ body #contactForm #contactForm_border {
   top: 25vh;
   margin-left: 50%;
   transform: translateX(-50%);
-  background-color: #f8f8f8;
+  background-color: #9b9191;
 }
 
 body #contactForm form {
@@ -558,7 +447,7 @@ body #contactForm form {
 }
 
 body #contactForm form dt {
-  color: #f8f8f8;
+  color: #4b4949;
   font-size: 18px;
   line-height: 36px;
   font-family: 'ＭＳ ゴシック';
@@ -567,10 +456,10 @@ body #contactForm form dt {
 body #contactForm form input {
   width: 30vw;
   margin-bottom: 20px;
-  border-style: none;
+  border: #757575 solid 2px;
   border-radius: 5px;
-  color: #ffffff;
-  background-color: #262626;
+  color: #757575;
+  background-color: #fff;
   font-size: 20px;
   line-height: 26px;
 }
@@ -580,10 +469,10 @@ body #contactForm form textarea {
   height: 40vh;
   resize: none;
   margin-bottom: 40px;
-  border-style: none;
+  border: #757575 solid 2px;
   border-radius: 5px;
-  color: #ffffff;
-  background-color: #262626;
+  color: #757575;
+  background-color: #fff;
 }
 
 body #contactForm form span {
@@ -592,17 +481,68 @@ body #contactForm form span {
 
 body #contactForm form #form_submit_button {
   padding: 15px 30px !important;
-  background-color: #fcf378 !important;
+  background-color: rgba(52, 228, 46, 0.3) !important;
   color: #000000 !important;
   font-family: 'ＭＳ ゴシック' !important;
 }
 
+
+
+
 body footer {
   width: 100vw;
-  height: 10vh;
+  height: 70vh;
   position: relative;
-  background-color: #3f3f3f;
 }
+
+.content-title p {
+  text-align: center;
+}
+
+
+.btn-social-phone {
+  padding-bottom: 50px;
+}
+
+.btn-social-phone a {
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 18px;
+  margin: 10px;
+}
+.btn-social-phone .fa-stack-2x {
+  color: black;
+  font-size:70px;
+}
+.btn-social-phone .fa-stack-1x{
+  display: inline-block;  
+  position: relative;
+  font-size: 25px;
+  top: 12px;
+  left:8px;
+  transition: .4s;
+}
+.btn-social-phone-twitter {
+  color: #74c1f8;
+}
+.btn-social-phone-facebook {
+  color: #668ad8;
+}
+.btn-social-phone-youtube {
+  color: #ff1b1b;
+}
+.btn-social-phone-instagram {
+  color: rgb(255, 196, 57);
+}
+.btn-social-phone a:hover .fa-stack-1x {
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
+
+/* ここまで変更 */
+
+
+
 
 body footer #footer_conpanyName {
   position: absolute;
@@ -611,7 +551,7 @@ body footer #footer_conpanyName {
 }
 
 body footer #footer_conpanyName h2 {
-  color: #f8f8f8;
+  color: #757575;
   font-size: 12px;
 }
 

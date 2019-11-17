@@ -11,20 +11,20 @@
   gtag('config', 'UA-132548917-3');
 </script>
     <meta charset="utf-8">
-    <title>W-Catch</title>
+    <title>Web Production</title>
     <meta name="description" content="関西のIT企業、株式会社Gudeによる、5万円でWEBサイトのデザインから実装までを請け負うサービスのランディングページです。">
     <!-- 要編集 -->
     <meta property="og:locale" content="ja_JP" />
-    <meta property="og:title" content="W-Catch" />
+    <meta property="og:title" content="Web Production" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="関西のIT企業、株式会社Gudeによる、5万円でWEBサイトのデザインから実装までを請け負うサービス" />
     <meta property="og:url" content="http://wcatch.gude.jp/" />
-    <meta property="og:site_name" content="W-Catch" />
+    <meta property="og:site_name" content="Web Production" />
     <meta property="og:image" content="サムネイル画像のURL" />
     <meta property="fb:app_id" content="">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:description" content="関西のIT企業、株式会社Gudeによる、5万円でWEBサイトのデザインから実装までを請け負うサービス">
-    <meta name="twitter:title" content="W-Catch" />
+    <meta name="twitter:title" content="Web Production" />
     <meta name="twitter:site" content="" />
     <meta name="twitter:image" content="" />
 
@@ -35,25 +35,35 @@
       <!-- PC対応 -->
     <link rel="stylesheet" href="css/style.css" media="(min-width: 767px)">
       <!-- mobile/tablet対応 -->
-    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)">
+    <!-- <link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)"> -->
     <link rel="stylesheet" href="css/reset.css">
     <!-- メールフォームのCSS -->
     <!-- <link rel="stylesheet" href="mailform-v7.2/css/mailform.css" /> -->
     <link rel="stylesheet" href="mailform-v7.2/css/jquery.datetimepicker.css" />
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
   <body>
     <div id="navigation">
       <div id="navigation_wrapper">
         <div id="navigation_companyName">
-          <h2>W-Catch</h2>
+          <h2>Web Production</h2>
         </div>
-        <div id="navigation_buttonToForm">
-            <a href="#contactForm_title">
-              <p>お問い合わせ</p>
-            </a>
+        <div id="navigation_button">
+
+          <!-- ここから変更 -->
+          <ul class="header-navi-list">
+            <li class="header-navi-item">
+              <a href="#" class="header-navi-text">-SERVICE-</a>
+            </li>
+            <li class="header-navi-item">
+              <a href="#" class="header-navi-text">-COMPANY-</a>
+            </li>
+            <li class="header-navi-item">
+              <a href="#" class="header-navi-text">-CONTACT-</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -63,12 +73,14 @@
         <object type="image/svg+xml" data="img/headerBg2.svg" id="header_backgroundPattern"></object>
       </div>
       <div id="header_text_1">
-        <h1>気軽にIT導入を。</h1>
+        <h1>- Web Production -</h1>
       </div>
       <div id="header_text_2">
-        <h2>WEBサイトのデザインから実装までを低価格でいたします。</h2>
+        <h2>Web制作</h2>
       </div>
     </header>
+
+    <!-- メインコンテンツ -->
     <article id="content">
       <object type="image/svg+xml" data="img/contentsBg1.svg" id="contents_background_1"></object>
       <object type="image/svg+xml" data="img/contentsBg2.svg" id="contents_background_2"></object>
@@ -76,90 +88,103 @@
       <object type="image/svg+xml" data="img/contentsBg4.svg" id="contents_background_4"></object>
       <object type="image/svg+xml" data="img/contentsBg5.svg" id="contents_background_5"></object>
       <object type="image/svg+xml" data="img/contentsBg6.svg" id="contents_background_6"></object>
-      <section class="none" id="contents_animation">
-        <div class="contents_title">
-          <h2>デザイン重視の、わかりやすいサイトに。</h2>
-        </div>
-        <div class="contents_border"></div>
-        <div class="contents_text">
-          <p>人間の視覚情報は70%を占めています。アニメーションをつけることにより、ユーザーはページを直観的に理解することができます。貴社の商品やサービス、メッセージを印象的に表現することが可能になります。</p>
-        </div>
-      </section>
-      <div class="contents_animationExample none" id="contents_animationExample_1">
-        <div class="contents_animationExample_wrapper">
-          <p>文章にフェードインやスライドインなどのアニーメーションをつけることにより、ユーザーの目を引いたり、サイト全体の印象を良くすることができます。</p>
-          <h2 id="contents_animationExample_fadein">FADE IN</h2>
-          <h2 id="contents_animationExample_slideIn">SLIDE IN</h2>
+  
+      <!-- 何ができるか -->
+      <div class="content-wrap">
+        <div class="content-title">
+          <h1>- What We Can Do -</h1>
+          <h2>できること</h2>
+          <ul class="content-list">
+            <li id="content-item1"><p id="text1">MARKETING</p></li>
+            <li id="content-item2"><p id="text2">DESIGN</p></li>
+            <li id="content-item3"><p id="text3">TECHNICAL</p></li>
+          </ul>
         </div>
       </div>
-      <div class="contents_animationExample none" id="contents_animationExample_2">
-        <div class="contents_animationExample_wrapper">
-          <p>ローディング中のアニメーションをページにつけることによって、ユーザーをページの読み込み中も飽きさせません。</p>
-          <h2 id="contents_animationExample_loading_1">Loading</h2>
-          <object type="image/svg+xml" data="img/loading.svg" id="contents_animationExample_loading_2"></object>
+
+      <!-- プラン -->
+      <div class="content-wrap">
+        <div class="content-title">
+          <h1>- Site Plan -</h1>
+          <h2>参考プラン</h2>
+        </div>
+        <div class="plan-select">
+          <div class="plan">
+            <h1>SIMPLE</h1>
+          </div>
+          <div class="plan">
+            <h1>STANDARD</h1>
+          </div>
+          <div class="plan">
+            <h1>EXPART</h1>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div id="plans">
+          <div class="plans1 hidden">
+            <h1>SIMPLE</h1>
+            <p>SIMPLE SIMPLE SIMPLE SIMPLE<br>SIMPLE SIMPLE SIMPLE SIMPLE</p>
+          </div>
+          <!-- <div class="plans2 hidden">
+            <h1>STANDARD</h1>
+            <p>STANDARD STANDARD STANDARD<br>STANDARD STANDARD STANDARD</p>
+          </div>
+          <div class="plans3 hidden">
+            <h1>EXPART</h1>
+            <p>EXPART EXPART EXPART<br>EXPART EXPART EXPART</p>
+          </div> -->
+        </div>
+        <div class="plan-suggest">
+          <div class="plan-default">
+            <ul class="plan-simple1">
+              <li>Top</li>
+            </ul>
+          </div>
+          <div class="plan-default">
+            <ul class="plan-simple2">
+              <li>Service</li>
+              <li>News</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div class="plan-default">
+            <ul class="plan-standard">
+              <li>About Us</li>
+              <li>Company</li>
+              <li>Performance</li>
+            </ul>
+          </div>
+          <div class="plan-default">
+            <ul class="plan-expart">
+              <li>Recruit</li>
+              <li>Privacy Policy</li>
+              <li>404</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="contents_animationExample none" id="contents_animationExample_3">
-        <div class="contents_animationExample_wrapper">
-          <p>ボタンなどにアニメーションをつけることにより、ページはより使いやすく、デザイン性の高いものとなります。</p>
-          <div id="contents_animationExample_button_1"><p>BUTTON</p></div>
-          <div id="contents_animationExample_button_2">
-            <object type="image/svg+xml" data="img/button2.svg">
-              <p>BUTTON</p>
-            </object>
-          </div>
+
+      <!-- 制作工程 -->
+      <div id="web-flow">
+        <div class="content-title">
+          <h1>- Web Flow -</h1>
+          <h2>制作工程</h2>
         </div>
-      </div>
-      <section class="none" id="contents_cms">
-        <div class="contents_title">
-          <h2>CMSによる、管理の簡単なサイトに。</h2>
+        <div class="flow">
+          <div class="flow-box"><img src="img/call.svg"><h1>お問い合わせ</h1></div>
+          <div class="flow-box"><img src="img/contact.svg"><h1>ご連絡</h1></div>
+          <div class="flow-box"><img src="img/hearing.svg"><h1>ヒアリング</h1></div>
+          <div class="flow-box"><img src="img/suggest.svg"><h1>ご提案</h1></div>
+          <div class="flow-box"><img src="img/start.svg"><h1>制作開始</h1></div>
         </div>
-        <div class="contents_border"></div>
-        <div class="contents_text">
-          <p>Wordpressに代表されるCMSをWebサイト
-            に導入することにより、記事の追加などの管理、更新が簡単に行えるようになります。IT導入コンサルティングも同時に行いますので、ITに弱い方でも簡単に使用・分析が可能です・</p>
-        </div>
-      </section>
-      <section class="none" id="contents_plansTitle">
-        <h2>制作プラン</h2>
-        <p>これらを基本5万円で制作いたします。</p>
-      </section>
-      <section class="none" id="contents_plan_1">
-        <div class="contents_plan_wrapper">
-          <div class="contents_title">
-            <h2>LP(ランディングページ)</h2>
-          </div>
-          <div class="contents_border"></div>
-          <div class="contents_text">
-            <p>商品やサービスの広告用のランディングページを作成いたします。基本的には商品やサービスの紹介、お問い合わせフォームで構成されるサイトの制作を想定しております。</p>
-          </div>
-          <div class="contents_plan_term">
-            <p><i class="material-icons">today</i>制作日程    1～2ヶ月</p>
-          </div>
-        </div>
-      </section>
-      <section class="none" id="contents_plan_2">
-        <div class="contents_plan_wrapper">
-          <div class="contents_title">
-            <h2>コーポレートサイト</h2>
-          </div>
-          <div class="contents_border"></div>
-          <div class="contents_text">
-            <p>企業のブランディングを目的としたコーポレートページを作成いたします。事業紹介、会社の概要、お問い合わせフォームなどで構成されるサイトの背策を想定しております。CMSの導入により、ニュースなどの記事の投稿を簡単に行えるサイトの構築が可能です。</p>
-          </div>
-          <div class="contents_plan_term">
-            <p><i class="material-icons">today</i>制作日程    1～2ヶ月</p>
-          </div>
-        </div>
-      </section>
-      <div class="none" id="contents_buttonToForm">
-          <a href="#contactForm_title">
-            <p><i class="material-icons">mail</i>お問い合わせはこちら</p>
-          </a>
       </div>
     </article>
+     
+
+    <!-- お問い合わせ -->
     <article id="contactForm">
-      <div id="contactForm_title">
+      <div class="content-title">
+        <h1>- Contact -</h1>
         <h2>お問い合わせ</h2>
       </div>
       <div id="contactForm_border"></div>
@@ -192,10 +217,51 @@
             <span id="contents_error" class="error_m"></span>
           </dd>
         </dl>
-        <p id="form_submit"><input type="button" id="form_submit_button" value="送信する" onclick="input_check()"/></p>
+        <p id="form_submit"><input type="button" id="form_submit_button" value="送信" onclick="input_check()"/></p>
       </form>
     </article>
+
     <footer>
+      <div class="content-title">
+        <h1>- GUDE -</h1>
+        <p>株式会社GUDE<br>〒530-0011<br>大阪市北区大深町4-1<br>グランフロント大阪ナレッジキャピタルタワーC 7階 GVH Osaka<br>info@gude.jp</p>
+      </div>
+
+      <div class="btn-social-phone">
+        <!--以下twitter-->
+        <a href="#">
+          <span class="fa-stack">
+          <i class="fas fa-tablet-alt fa-stack-2x"></i>
+          <i class="fab fa-twitter fa-stack-1x btn-social-phone-twitter"></i>
+          </span>
+        </a>
+        <!--以下facebook-->
+        <a href="#">
+          <span class="fa-stack">
+          <i class="fas fa-tablet-alt fa-stack-2x"></i>
+          <i class="fab fa-facebook fa-stack-1x btn-social-phone-facebook"></i>
+          </span>
+        </a>
+        <!--以下instagram-->
+        <a href="#">
+          <span class="fa-stack">
+          <i class="fas fa-tablet-alt fa-stack-2x"></i>
+          <i class="fab fa-instagram fa-stack-1x btn-social-instagram"></i>
+          </span>
+        </a>
+        <!--以下pocket-->
+        <a href="#">
+          <span class="fa-stack">
+          <i class="fas fa-tablet-alt fa-stack-2x"></i>
+          <i class="fab fa-youtube fa-stack-1x btn-social-phone-youtube"></i>
+          </span>
+        </a>
+      </div>
+
+      <!-- ここまで変更 -->
+
+
+
       <div id="footer_conpanyName">
         <h2>© 2019 Inc.Gude</h2>
       </div>
