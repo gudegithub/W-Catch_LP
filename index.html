@@ -38,30 +38,33 @@
     <!-- <link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)"> -->
     <link rel="stylesheet" href="css/reset.css">
     <!-- メールフォームのCSS -->
-    <!-- <link rel="stylesheet" href="mailform-v7.2/css/mailform.css" /> -->
+    <link rel="stylesheet" href="mailform-v7.2/css/mailform.css" />
     <link rel="stylesheet" href="mailform-v7.2/css/jquery.datetimepicker.css" />
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
-  <body>
+<body>
+    <!-- ローディング用 -->
+  <div id="showloading">
+    <img src="img/nowloading.svg">
+  </div>
+  <div class="hidden" id="contentsAll">
     <div id="navigation">
       <div id="navigation_wrapper">
         <div id="navigation_companyName">
           <h2>Web Production</h2>
         </div>
         <div id="navigation_button">
-
-          <!-- ここから変更 -->
           <ul class="header-navi-list">
             <li class="header-navi-item">
-              <a href="#" class="header-navi-text">-SERVICE-</a>
+              <a href="#sitePlan" class="header-navi-text">-SERVICE-</a>
             </li>
             <li class="header-navi-item">
-              <a href="#" class="header-navi-text">-COMPANY-</a>
+              <a href="#company-info" class="header-navi-text">-COMPANY-</a>
             </li>
             <li class="header-navi-item">
-              <a href="#" class="header-navi-text">-CONTACT-</a>
+              <a href="#contactForm" class="header-navi-text">-CONTACT-</a>
             </li>
           </ul>
         </div>
@@ -88,77 +91,98 @@
       <object type="image/svg+xml" data="img/contentsBg4.svg" id="contents_background_4"></object>
       <object type="image/svg+xml" data="img/contentsBg5.svg" id="contents_background_5"></object>
       <object type="image/svg+xml" data="img/contentsBg6.svg" id="contents_background_6"></object>
-  
+
       <!-- 何ができるか -->
       <div class="content-wrap">
         <div class="content-title">
           <h1>- What We Can Do -</h1>
           <h2>できること</h2>
-          <ul class="content-list">
-            <li id="content-item1"><p id="text1">MARKETING</p></li>
-            <li id="content-item2"><p id="text2">DESIGN</p></li>
-            <li id="content-item3"><p id="text3">TECHNICAL</p></li>
-          </ul>
+          <div class="content-list">
+            <div id="content-item1">
+              <p id="text1">MARKETING</p>
+              <img src="./img/marketing.svg" id="marketing-img">
+              <p id="text1-content">CMSの導入やSEO対策などの技術を駆使し、戦略を打ち出します。<br>さらにはミレニアル世代にも対応したWeb集客を行い、新規層の獲得の成功へも導きます。</p>
+            </div>
+            <div id="content-item2">
+              <p id="text2">DESIGN</p>
+              <img src="./img/design.svg" id="design-img">
+              <p id="text2-content">人は視覚から最も多く情報量を取得します。そのため会社のイメージを直感的に伝えるデザインを。更には使いやすさを追求したUIデザインとの両立をはかります。</p>
+            </div>
+            <div id="content-item3">
+              <p id="text3">TECHNICAL</p>
+              <img src="./img/technical.svg" id="technical-img">
+              <p id="text3-content">ミレニアル世代に対する自社の強みを活かすには日々の技術の追求は欠かせません。<br>新しい技術を上手く利用し戦略やデザイン、コンテンツ制作を行います。</p>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- プラン -->
-      <div class="content-wrap">
+      <div id="sitePlan">
         <div class="content-title">
           <h1>- Site Plan -</h1>
           <h2>参考プラン</h2>
         </div>
-        <div class="plan-select">
-          <div class="plan">
-            <h1>SIMPLE</h1>
+        <div class="plan-select" id="plan">
+          <div id="plan1Button">
+            <input class="plan" name="SIMPLE" type="radio">
+            <p>S I M P L E</p>
           </div>
-          <div class="plan">
-            <h1>STANDARD</h1>
+          <div id="plan2Button">
+            <input class="plan" name="STANDARD" type="radio">
+            <p >S T A N D A R D</p>
           </div>
-          <div class="plan">
-            <h1>EXPART</h1>
+          <div class="last" id="plan3Button" >
+            <input class="plan" name="EXPART" type="radio">
+            <p>E X P A R T</p>
           </div>
-          <div class="clear"></div>
         </div>
         <div id="plans">
-          <div class="plans1 hidden">
+          <div id="planDefault">
+            <h1>CHOOSE BUTTON</h1>
+            <p>ご希望のプランを選択してください。<br>プランごとの参考例が表示されます。</p>
+          </div>
+          <div id="plan1Content">
             <h1>SIMPLE</h1>
-            <p>SIMPLE SIMPLE SIMPLE SIMPLE<br>SIMPLE SIMPLE SIMPLE SIMPLE</p>
+            <p>既存のLPの改修で小規模のもの<br>数ページ規模で簡素になります。</p>
           </div>
-          <!-- <div class="plans2 hidden">
+          <div id="plan2Content">
             <h1>STANDARD</h1>
-            <p>STANDARD STANDARD STANDARD<br>STANDARD STANDARD STANDARD</p>
+            <p>新規デザインが必要になるようなもの<br>10ページ前後の規模になります。</p>
           </div>
-          <div class="plans3 hidden">
+          <div id="plan3Content">
             <h1>EXPART</h1>
-            <p>EXPART EXPART EXPART<br>EXPART EXPART EXPART</p>
-          </div> -->
+            <p>入念なデザインを必要とするようなもの<br>10ページ以上の規模になります。</p>
+          </div>
+          <div>
+            <a>※プランは参考程度になります。まずはご相談お願いします。</a>
+          </div>
         </div>
         <div class="plan-suggest">
           <div class="plan-default">
-            <ul class="plan-simple1">
-              <li>Top</li>
+            <ul class="plan-simple1" id="plan0List">
+              <li id="top">Top</li>
             </ul>
           </div>
           <div class="plan-default">
-            <ul class="plan-simple2">
-              <li>Service</li>
-              <li>News</li>
-              <li>Contact</li>
+            <ul class="plan-simple2" id="plan1List">
+              <li id="service">Service</li>
+              <li id="news">News</li>
+              <li id="contact">Contact</li>
             </ul>
           </div>
           <div class="plan-default">
-            <ul class="plan-standard">
-              <li>About Us</li>
-              <li>Company</li>
-              <li>Performance</li>
+            <ul class="plan-standar" id="plan2List">
+              <li id="aboutUs">About Us</li>
+              <li id="company">Company</li>
+              <li id="perfomance">Performance</li>
             </ul>
           </div>
           <div class="plan-default">
-            <ul class="plan-expart">
-              <li>Recruit</li>
-              <li>Privacy Policy</li>
-              <li>404</li>
+            <ul class="plan-expart" id="plan3List">
+              <li id="recruit">Recruit</li>
+              <li id="privacy">Privacy Policy</li>
+              <li id="404">404</li>
             </ul>
           </div>
         </div>
@@ -170,16 +194,29 @@
           <h1>- Web Flow -</h1>
           <h2>制作工程</h2>
         </div>
-        <div class="flow">
-          <div class="flow-box"><img src="img/call.svg"><h1>お問い合わせ</h1></div>
-          <div class="flow-box"><img src="img/contact.svg"><h1>ご連絡</h1></div>
-          <div class="flow-box"><img src="img/hearing.svg"><h1>ヒアリング</h1></div>
-          <div class="flow-box"><img src="img/suggest.svg"><h1>ご提案</h1></div>
-          <div class="flow-box"><img src="img/start.svg"><h1>制作開始</h1></div>
+        <div class="flow"　id="flow">
+          <div class="flow-box"><img src="img/call.svg" id="flow_img1"><h1 id="flow_comment1">お問い合わせ</h1></div>
+          <div class="flow-box"><img src="img/contact.svg" id="flow_img2"><h1 id="flow_comment2">ご連絡</h1></div>
+          <div class="flow-box"><img src="img/hearing.svg" id="flow_img3"><h1 id="flow_comment3">ヒアリング</h1></div>
+          <div class="flow-box"><img src="img/suggest.svg" id="flow_img4"><h1 id="flow_comment4">ご提案</h1></div>
+          <div class="flow-box"><img src="img/start.svg" id="flow_img5"><h1 id="flow_comment5">制作開始</h1></div>
+            <!-- ２周目用画像 -->
+          <div class="flow-box"><img src="img/call.svg" id="flow_img1"><h1 id="flow_comment1">お問い合わせ</h1></div>
+          <div class="flow-box"><img src="img/contact.svg" id="flow_img2"><h1 id="flow_comment2">ご連絡</h1></div>
+          <div class="flow-box"><img src="img/hearing.svg" id="flow_img3"><h1 id="flow_comment3">ヒアリング</h1></div>
+          <div class="flow-box"><img src="img/suggest.svg" id="flow_img4"><h1 id="flow_comment4">ご提案</h1></div>
+          <div class="flow-box"><img src="img/start.svg" id="flow_img5"><h1 id="flow_comment5">制作開始</h1></div>
+        </div>
+        <div class="flowDetail">
+          <div class="flowDetailBox">
+            <img id="flowDetailImg" src="img/start.svg">
+            <h1 id="flowDetailTitle">制作開始</h1>
+            <p>-</p><p class="flowDetailContent" id="flowDetailContent">制作に取りかかります。</p><p>-</p>
+          </div>
         </div>
       </div>
     </article>
-     
+
 
     <!-- お問い合わせ -->
     <article id="contactForm">
@@ -222,11 +259,14 @@
     </article>
 
     <footer>
-      <div class="content-title">
-        <h1>- GUDE -</h1>
-        <p>株式会社GUDE<br>〒530-0011<br>大阪市北区大深町4-1<br>グランフロント大阪ナレッジキャピタルタワーC 7階 GVH Osaka<br>info@gude.jp</p>
+      <div class="content-title" id="company-info">
+        <h1>- Gude -</h1>
+        <p>株式会社Gude<br>〒530-0011<br>大阪市北区大深町4-1<br>グランフロント大阪ナレッジキャピタルタワーC 7階 GVH Osaka<br>info@gude.jp</p>
       </div>
-
+      <!-- google Map -->
+      <div class="googleMap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3279.9957022620183!2d135.4924840155364!3d34.7052883404796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5aSn6Ziq5biC5YyX5Yy65aSn5rex55S6NC0xIOOCsOODqeODs-ODleODreODs-ODiOWkp-mYquODiuODrOODg-OCuOOCreODo-ODlOOCv-ODq-OCv-ODr-ODvEMgN-majiBHVkggT3Nhaw!5e0!3m2!1sja!2sjp!4v1574145980292!5m2!1sja!2sjp" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
       <div class="btn-social-phone">
         <!--以下twitter-->
         <a href="#">
@@ -258,7 +298,6 @@
         </a>
       </div>
 
-      <!-- ここまで変更 -->
 
 
 
@@ -280,14 +319,14 @@
     <!-- フリガナ自動入力ライブラリここから -->
     <script src="mailform-v7.2/js/jquery.autoKana.js"></script>
     <script>
-    	(function( $ ) {
-    		$.fn.autoKana( '#name_1', '#read_1', {
-    			katakana: false
-    		});
-    		$.fn.autoKana( '#name_2', '#read_2', {
-    			katakana: false
-    		});
-    	})( jQuery );
+      (function( $ ) {
+        $.fn.autoKana( '#name_1', '#read_1', {
+          katakana: false
+        });
+        $.fn.autoKana( '#name_2', '#read_2', {
+          katakana: false
+        });
+      })( jQuery );
     </script>
     <!-- フリガナ自動入力ライブラリここまで -->
 
@@ -298,12 +337,13 @@
     <!-- ご希望の日時選択ライブラリここから -->
     <script src="mailform-v7.2/js/jquery.datetimepicker.js"></script>
     <script>
-    	(function( $ ) {
-    		$( 'input#schedule' ).datetimepicker({
-    			lang: 'ja'
-    		});
-    	})( jQuery );
+      (function( $ ) {
+        $( 'input#schedule' ).datetimepicker({
+          lang: 'ja'
+        });
+      })( jQuery );
     </script>
     <!-- ご希望の日時選択ライブラリここまで -->
-  </body>
+  </div>
+</body>
 </html>
