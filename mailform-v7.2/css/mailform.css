@@ -4,12 +4,14 @@
 form#mail_form * {
 	margin: 0;
 	padding: 0;
+	display: inline-block;
+	text-align: center;
 }
 
 form#mail_form {
 	width: 960px;
 	margin: 50px auto;
-	padding: 10px 0;
+	padding: 5vh 0;
 	background: #ffffff;
 	border: 1px solid #cccccc;
 	border-radius: 7px;
@@ -26,19 +28,18 @@ form#mail_form dl {
 
 form#mail_form dl dt {
 	clear: both;
-	width: 30%;
-	float: left;
-	border-top: 1px solid #cccccc;
-	padding: 15px 0;
-	text-align: right;
+	width: 50%;
+	float: none;
+	/* padding: 15px 0; */
+	/* text-align: right; */
 	overflow: hidden;
 }
 
 form#mail_form dl dd {
 	width: 65%;
-	float: right;
-	border-top: 1px solid #cccccc;
-	padding: 15px 0 15px 5%;
+	float: none;
+	/* border-top: 1px solid #cccccc; */
+	padding: 15px 0 15px 0;
 }
 
 form#mail_form dl dt:first-child,
@@ -57,10 +58,10 @@ form#mail_form dl dt span {
 
 form#mail_form dl dt span.required,
 form#mail_form dl dt span.optional {
-	display: inline-block;
+	display: block;
 	float: left;
 	color: #ffffff;
-	padding: 4px 10px;
+	/* padding: 4px 10px; */
 	border-radius: 3px;
 }
 
@@ -170,7 +171,7 @@ form#mail_form select {
 }
 
 form#mail_form textarea {
-	display: block;
+	display: inline-block;
 	width: 90%;
 	max-width: 90%;
 	height: 200px;
@@ -195,7 +196,7 @@ form#mail_form ul li label:hover {
 
 
 form#mail_form input#company {
-	width: 60%;
+	width: 100%;
 }
 
 form#mail_form input#name_1,
@@ -205,16 +206,16 @@ form#mail_form input#read_2,
 form#mail_form input#postal,
 form#mail_form input#phone,
 form#mail_form input#schedule {
-	width: 30%;
+	width: 100%;
 }
 
 form#mail_form input#mail_address,
 form#mail_form input#mail_address_confirm {
-	width: 80%;
+	width:100%;
 }
 
 form#mail_form input#postal + a {
-	display: inline-block;
+	display: block;
 	padding: 5px 15px;
 	border: 1px solid #46b8da;
 	border-radius: 3px;
@@ -231,18 +232,21 @@ form#mail_form input#postal + a:hover {
 }
 
 form#mail_form input#address {
-	width: 90%;
+	width: 100%;
 }
 
 
 form#mail_form p#form_submit {
-	width: 90%;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
 	margin: 0 auto;
 	padding: 15px 0;
-	border-top: 1px solid #cccccc;
+	/* border-top: 1px solid #cccccc; */
 }
 
 form#mail_form input[type="button"] {
+	text-align: center;
 	padding: 7px 20px;
 	border: 1px solid #4cae4c;
 	border-radius: 3px;
@@ -260,7 +264,7 @@ form#mail_form input[type="button"]:hover {
 }
 
 form#mail_form input#form_submit_button {
-	margin-left: 35%;
+	margin:auto;
 }
 
 
@@ -341,7 +345,3 @@ form#mail_form input#schedule {
 
 }
 /* 1000pixel end */
-
-
-
-
