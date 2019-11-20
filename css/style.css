@@ -10,6 +10,7 @@
   margin: auto;
   padding: auto;
   font-family: "PT Mono";
+  overflow: none;
 }
 
 
@@ -26,6 +27,12 @@ top: 20vh;
 }
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 767px) {
+  #showloading img {
+    top: 40vh;
+  }
 }
 
 html {
@@ -52,10 +59,9 @@ body #navigation #navigation_wrapper {
   position: relative;
 }
 
-/* 2019.10.15 1行に収まる様に幅を調整 */
 body #navigation #navigation_wrapper #navigation_companyName {
   width: 20vw;
-  height: 10vh;
+  height: 4vh;
   position: absolute;
   top: 3vh;
   left: 30px;
@@ -68,46 +74,7 @@ body #navigation #navigation_wrapper #navigation_companyName h2 {
   font-family: "PT Mono";
 }
 
-/* 2019.10.15 ボタンを定型に変更 */
-/* 2019.10.15 文字サイズ調整 */
-
-/* 2019.11.7 一旦コメントに 味元*/
-/* body #navigation #navigation_wrapper #navigation_buttonToForm {
-  width: 200px;
-  height: 80px;
-  position: absolute;
-  top: 5px;
-  right: 30px;
-  border-radius: 20%;
-  background: linear-gradient(136.9deg, #00a09b 3.1%, #00b383 95.27%);
-  box-shadow: 1px 3px 3px 2px #262626;
-}
-
-body #navigation #navigation_wrapper #navigation_buttonToForm:hover {
-  background: linear-gradient(136.9deg, #40a19d 3.1%, #47b396 95.27%);
-}
-
-body #navigation #navigation_wrapper #navigation_buttonToForm a {
-  z-index: 6;
-  display: block;
-  position: relative;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-body #navigation #navigation_wrapper #navigation_buttonToForm a p {
-  z-index: 5;
-  font-size: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-30%);
-  user-select: none;
-  color: #f8f8f8;
-  font-family: 'ＭＳ ゴシック';
-} */
-
-.header-navi-list {
+body #navigation #navigation_wrapper #navigation_button ul {
   position: absolute;
   font-size: 25px;
   top: 26px;
@@ -116,34 +83,70 @@ body #navigation #navigation_wrapper #navigation_buttonToForm a p {
   letter-spacing:  0.3em;
 }
 
-.header-navi-item {
+body #navigation #navigation_wrapper #navigation_button li {
   display: inline;
   padding-left: 25px;
 }
 
-.header-navi-item:hover {
+body #navigation #navigation_wrapper #navigation_button li:hover {
   opacity: 0.8;
 }
 
-.header-navi-item a {
+body #navigation #navigation_wrapper #navigation_button a {
   text-decoration: none;
   color: #4b4949;
 }
 
+@media screen and (max-width: 767px) {
+  body #navigation {
+    z-index: 5;
+    width: 100vw;
+    height: 20vh;
+  }
+  body #navigation #navigation_wrapper {
+    width: 100%;
+    height: 250%;
+    position: relative;
+  }
+  body #navigation #navigation_wrapper #navigation_companyName {
+    width: 100vw;
+    left: 0;
+    margin: auto;
+  }
 
+  body #navigation #navigation_wrapper #navigation_companyName h2 {
+    font-size: 2em;
+  }
+  body #navigation #navigation_wrapper #navigation_button {
+    text-align: center;
+  }
+  body #navigation #navigation_wrapper #navigation_button ul {
+    top: 8vh;
+    right: 0;
+    margin: auto;
+  }
+  body #navigation #navigation_wrapper #navigation_button a {
+    font-size: 0.8em;
+    display: inline-block;
+    padding-top: 0.7vh;
+  }
+  body #navigation #navigation_wrapper #navigation_button li:hover {
+    opacity: 0.7;
+  }
+}
+
+/* ---------- header ---------- */
 body header {
   width: 100vw;
   height: 100vh;
   position: relative;
 }
-
 body header #header_background {
   z-index: -3;
   width: 100vw;
   position: absolute;
   top: -25vh;
 }
-
 body header #header_backgroundPattern_container {
   z-index: -2;
   width: 40vw;
@@ -152,25 +155,21 @@ body header #header_backgroundPattern_container {
   top: -50vh;
   right: 10vw;
 }
-
 body header #header_backgroundPattern_container #header_backgroundPattern {
   filter: blur(0.5px);
   animation: rotating 41s linear infinite;
   opacity: 0.8;
 }
-
 body header #header_text_1 {
   position: relative;
   top: 40vh;
   text-align: center;
   animation: fadein 1s;
 }
-
 body header #header_text_1 h1 {
   font-size: 64px;
   font-family: "PT Mono";
 }
-
 body header #header_text_2 {
   position: relative;
   margin: 0;
@@ -178,22 +177,33 @@ body header #header_text_2 {
   text-align: center;
   animation: fadein 1s;
 }
-
 body header #header_text_2 h2 {
   font-size: 32px;
   font-family: "PT Mono";
   width: 100vw;
 }
 
+@media screen and (max-width: 767px) {
+  body header { height: 65vh;}
+  body header #header_text_1 {
+    top: 40vh;
+  }
+  body header #header_text_1 h1  {
+    font-size: 0;
+  }
+  body header #header_text_1 h1:before  {
+    font-size: 36px;
+    content: "-Web Production-";
+  }
+  body header #header_text_2 {
+    top: 45vh;
+  }
+  body header #header_text_2 h2 {
+    font-size: 24px;
+  }
+}
 
-/* 11/10変更により一旦コメント味元 */
-/* body #content {
-  width: 100vw;
-  height: 400vh;
-  position: relative;
-} */
-
-/* メインコンテンツ */
+/* ---------- body ---------- */
 body #content #contents_background_1 {
   z-index: -2;
   width: 80vw;
@@ -258,11 +268,11 @@ body #content #contents_background_6 {
 
 /*-------- What We Can Do --------*/
 
-.content-wrap {
+body .content-wrap {
   height: 2200px;
 }
 
-.content-title {
+body .content-title {
   padding-top: 100px;
   position: relative;
   margin: 0 auto;
@@ -272,28 +282,28 @@ body #content #contents_background_6 {
   width: 90vw;
 }
 
-.content-title h1 {
+body .content-title h1 {
   font-size: 56px;
   margin-bottom: 15px;
   margin-top: 10vh;
 }
 
-.content-title h2 {
+body .content-title h2 {
   font-size: 36px;
   padding-bottom: 20vh;
 }
 
-.content-title h1,h2 {
+body .content-title h1,h2 {
   text-align: center;
 }
 
-.content-list {
+body .content-list {
   font-size: 48px;
   letter-spacing: 1em;
   margin: 0 10vw;
 }
 
-#content-item1, #content-item2, #content-item3 {
+body #content-item1, #content-item2, #content-item3 {
   border: #757575 solid 2px;
   margin-bottom: 150px;
   background-color: rgba(199, 170, 170, 0.8);
@@ -301,7 +311,7 @@ body #content #contents_background_6 {
   text-align: center;
 }
 
-#text1, #text2, #text3 {
+body #text1, #text2, #text3 {
   position: absolute;
   left: 0;
   right: 0;
@@ -310,7 +320,7 @@ body #content #contents_background_6 {
   margin: auto;
 }
 
-#text1-content, #text2-content, #text3-content {
+body #text1-content, #text2-content, #text3-content {
   position: absolute;
   display: inline;
   font-size: 24px;
@@ -321,7 +331,7 @@ body #content #contents_background_6 {
   opacity: 0;
 }
 
-.content-list img {
+body .content-list img {
   height: 336px;
   padding: 0;
   opacity:0;
@@ -329,14 +339,62 @@ body #content #contents_background_6 {
   position: relative;
 }
 
-/* ---------Site Plan --------*/
+@media screen and (max-width: 767px) {
+  body .content-wrap {
+    height: 2700px;
+  }
+  body .content-wrap .content-title h1 {
+    font-size: 0;
+    margin: 5vh 0;
+  }
+  body .content-wrap .content-title h1:before {
+    font-size: 30px;
+    content: "What We Can Do";
+  }
+  body .content-wrap .content-title h2 {
+    font-size: 20px;
+  }
+  body .content-wrap .content-list {
+    margin: 0;
+    text-align: center;
+  }
+  body .content-wrap .content-list #content-item1, #content-item2, #content-item3 {
+    background-color: inherit;
+    border: none;
+    width: 93vw;
+  }
+  body .content-wrap .content-list #text1-content, #text2-content, #text3-content {
+    opacity: 1;
+    width: 100vw;
+    position: inherit;
+    font-size: 20px;
+    line-height: normal;
+    margin-top: 5vh;
+  }
+  body .content-wrap .content-list p {
+    font-size: 30px;
+    letter-spacing: 0.2em;
+    z-index: 2;
+  }
+  body .content-wrap .content-list img {
+    opacity: 0.4;
+    width: 80vw;
+    margin:auto;
+    padding: 0 5vw;
+    z-index: 0;
+    border-top: solid 2px;
+    right: 0;
+  }
+}
 
-#sitePlan {
+/* --------- Site Plan --------*/
+
+body #sitePlan {
   height: 1500px;
   min-width: 1020px;
 }
 
-.plan-select {
+body .plan-select {
   width: 90vw;
   font-family: 'PT Mono';
   display: flex;
@@ -350,23 +408,23 @@ body #content #contents_background_6 {
   background-color: rgb(199, 233, 193);
 }
 
-.plan-select div {
+body .plan-select div {
   position: relative;
   flex: 1;
   border-right: 1px solid;
 }
 
-.plan-select .last {
+body .plan-select .last {
   border-right: none;
 }
 
-.plan-select input {
+body .plan-select input {
   height: 60px;
   width: 100%;
   opacity: 0;
 }
 
-.plan-select p {
+body .plan-select p {
   position: absolute;
   top:0; left:0; bottom: 0; right: 0;
   color: #000;
@@ -378,25 +436,25 @@ body #content #contents_background_6 {
   margin: 20px 0;
 }
 
-.plan-select div:hover {
+body .plan-select div:hover {
   background: rgba(255, 255, 255, 0.6);
   font-weight: 500;
   color: #fff;
 }
 
-.plan {
+body .plan {
   display: flex;
   border-radius: 3px;
   border: 1px solid #b6b6b6;
   overflow: hidden;
 }
 
-#plans {
+body #plans {
   text-align: center;
   font-family: "PT Mono";
 }
 
-#plans h1 {
+body #plans h1 {
   font-size: 24px;
   padding: 50px 0 30px 0;
   letter-spacing: 1em;
@@ -405,7 +463,7 @@ body #content #contents_background_6 {
   margin-bottom: 10px;
 }
 
-#plans p {
+body #plans p {
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 1em;
@@ -413,17 +471,17 @@ body #content #contents_background_6 {
   margin-bottom: 80px;
 }
 
-#plans a {
+body #plans a {
   padding-bottom: 10px;
   font-family: "PT Mono";
   font-size: 12px;
 }
 
-#plan1Content, #plan2Content, #plan3Content {
+body #plan1Content, #plan2Content, #plan3Content {
   display: none;
 }
 
-.plan-suggest {
+body .plan-suggest {
   display: flex;
   box-sizing: border-box;
   border: #757575 solid 2px;
@@ -434,7 +492,7 @@ body #content #contents_background_6 {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
-.plan-default {
+body .plan-default {
   width: 200px;
   height: 450px;
   text-align: center;
@@ -445,18 +503,81 @@ body #content #contents_background_6 {
   margin-right: -0.2em;
 }
 
-.plan-default li {
+body .plan-default li {
   background-color: rgba(0,0,0,0.8);
   border-radius: 200px;
   margin: 30px 0;
   color: rgba(255, 255, 255, 1);
 }
 
-.plan-simple1 {
+body .plan-simple1 {
   padding-top: 130px;
 }
 
-
+@media screen and (max-width: 767px) {
+  body #sitePlan {
+    width: 100vw;
+    min-width: inherit;
+    overflow: hidden;
+    height: 200vh;
+  }
+  body #sitePlan .content-title h1{
+    font-size: 0;
+    display: inherit;
+    width: auto;
+    margin: 5vh 16.5vw;
+  }
+  body #sitePlan .content-title h1:before {
+    font-size: 30px;
+    content: "Site Plan";
+  }
+  body #sitePlan .content-title h2 {
+    font-size: 20px;
+    padding-bottom: 20vh;
+  }
+  body #sitePlan .plan-select {
+    display: inherit;
+  }
+  body #sitePlan .plan-select div {
+    border-right: none;
+    border-bottom: 1px solid;
+    padding: 3vh 2vw;
+  }
+  body #sitePlan .plan-select p {
+    padding-top: 3vh;
+  }
+  body #sitePlan .plan-select div:last-child {
+    border-bottom: none;
+  }
+  body #sitePlan #plans p {
+    width: 75vw;
+    margin: 5vh auto;
+  }
+  body #sitePlan .plan-suggest {
+    height: 360px;
+    padding: 3px;
+    width: 90vw;
+  }
+  body #sitePlan .plan-suggest .plan-default {
+    padding-left: 10px;
+    line-height: 10px;
+    letter-spacing: 0.1em;
+  }
+  body #sitePlan .plan-suggest .plan-default li {
+    font-size: 0.5em;
+    height: 5em;
+    margin-top: 20px;
+    padding-top: 4em;
+    margin-bottom: 0;
+    border-radius: 100px;
+  }
+  body #sitePlan .plan-suggest .plan-default ul:last-child {
+    margin-right: 10px;
+  }
+  body #sitePlan .plan-suggest .plan-default .plan-simple1 {
+    padding-top: 110px;
+  }
+}
 /*--------- 制作工程 ----------*/
 #web-flow {
   width: 100vw;
@@ -553,12 +674,52 @@ body #content #contents_background_6 {
   padding: 6px 24px;
 }
 
-
+@media screen and (max-width: 767px) {
+  body #web-flow {
+    width: 100vw;
+    min-width: inherit;
+    overflow: hidden;
+    height: 150vh;
+  }
+  body #web-flow .content-title h1{
+    font-size: 0;
+    display: inherit;
+    width: auto;
+    margin: 5vh 16.5vw;
+  }
+  body #web-flow .content-title h1:before {
+    font-size: 30px;
+    content: "Web Flow";
+  }
+  body #web-flow .content-title h2 {
+    font-size: 20px;
+    padding-bottom: 20vh;
+  }
+  body #web-flow .flow-box {
+    margin: 0 2.3vw;
+    height: 10vh;
+    width: 20vw;
+    padding-bottom: 60px;
+    padding-top: 5px;
+  }
+  body #web-flow .flow-box img {
+    width: 15vw;
+  }
+  body #web-flow .flowDetailBox {
+    width: 80vw;
+    height: 55vh;
+    padding-top: 10px;
+  }
+  body #web-flow .flowDetailBox img {
+    width: 60vw;
+    height: 30vh;
+  }
+}
 
 /* お問い合わせ */
 body #contactForm {
   width: 100vw;
-  height: 160vh;
+  height: 200vh;
   background-color: #ffffff;
   position: relative;
 }
@@ -574,7 +735,7 @@ body #contactForm #contactForm_title {
 body #contactForm #contactForm_title h2 {
   color: #f8f8f8;
   font-size: 24px;
-  font-family: 'ＭＳ ゴシック';
+  font-family: 'PT Mono';
 }
 
 body #contactForm #contactForm_border {
@@ -600,7 +761,7 @@ body #contactForm form dt {
   color: #4b4949;
   font-size: 18px;
   line-height: 36px;
-  font-family: 'ＭＳ ゴシック';
+  font-family: 'PT Mono';
 }
 
 body #contactForm form input {
@@ -636,7 +797,42 @@ body #contactForm form #form_submit_button {
   font-family: 'ＭＳ ゴシック' !important;
 }
 
-
+@media screen and (max-width:767px) {
+  body #contactForm {
+    width: 100vw;
+    min-width: inherit;
+    overflow: hidden;
+    height: 230vh;
+    text-align: center;
+  }
+  body #contactForm .content-title h1{
+    font-size: 0;
+    display: inherit;
+    width: auto;
+    margin: 8vh 18.5vw;
+  }
+  body #contactForm .content-title h1:before {
+    font-size: 30px;
+    content: "Contact";
+  }
+  body #contactForm .content-title h2 {
+    font-size: 20px;
+    padding-bottom: 20vh;
+  }
+  body #contactForm form {
+    width: 90vw;
+  }
+  body #contactForm form dl {
+    text-align: center;
+  }
+  body #contactForm form dt {
+    display: flex;
+    margin-left: 15vw;
+  }
+  body #contactForm form dd {
+    width: 100vw;
+  }
+}
 
 
 body footer {
@@ -725,6 +921,24 @@ body footer #footer_conpanyName {
 body footer #footer_conpanyName h2 {
   color: #757575;
   font-size: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  body footer {
+    width: 100vw;
+    min-width: inherit;
+    overflow: hidden;
+    height: 140vh;
+    text-align: center;
+  }
+  body footer .googleMap {
+    width: 90%;
+    text-align: center;
+    border: none;
+  }
+  body footer .googleMap iframe {
+    width: 95%;
+  }
 }
 
 @keyframes rotating {
@@ -845,7 +1059,7 @@ form#mail_form dl dd span.error_format,
 form#mail_form dl dd span.error_match {
   display: block;
   color: #ff0000;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 span.loading {
